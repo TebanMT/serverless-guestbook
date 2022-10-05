@@ -48,6 +48,8 @@ const guestbook = {
       const context = {
         entries: result.body
       }
+      console.log(result)
+      console.log(result.body)
       console.log(context)
       $('#entries').html(entriesTemplate(context));
     }).error(function(error) {

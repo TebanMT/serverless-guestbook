@@ -41,6 +41,10 @@ const guestbook = {
     console.log('Loading entries...');
     $('#entries').html('Loading entries...');
     guestbook.get().done(function(result) {
+      console.log("Hola")
+      console.log(result)
+      console.log(result.body)
+      console.log(context)
       if (!result.body) {
         return;
       }
@@ -48,9 +52,6 @@ const guestbook = {
       const context = {
         entries: result.body
       }
-      console.log(result)
-      console.log(result.body)
-      console.log(context)
       $('#entries').html(entriesTemplate(context));
     }).error(function(error) {
       $('#entries').html('No entries');

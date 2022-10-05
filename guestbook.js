@@ -46,7 +46,7 @@ const guestbook = {
       }
 
       const context = {
-        entries: result.body
+        entries: result
       }
       $('#entries').html(entriesTemplate(context));
     }).error(function(error) {
